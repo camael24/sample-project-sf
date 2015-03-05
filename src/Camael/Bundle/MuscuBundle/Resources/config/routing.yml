@@ -1,0 +1,19 @@
+camael_muscu_homepage:
+    path:     /
+    defaults: { _controller: CamaelMuscuBundle:Default:index }
+
+user_index:
+    path:     /user/
+    defaults: { _controller: CamaelMuscuBundle:User:index }
+
+user_create:
+    path:     /user/new
+    defaults: { _controller: CamaelMuscuBundle:User:new }
+
+user_edit:
+    path:     /user/{id}/edit
+    defaults: { _controller: CamaelMuscuBundle:User:edit }
+
+user_show:
+    path:     /user/{id}
+    defaults: { _controller: CamaelMuscuBundle:User:show }

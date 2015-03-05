@@ -1,0 +1,30 @@
+{% extends 'CamaelMuscuBundle::layout.html.twig' %}
+
+{% block content %}
+   <table class="table">
+   		<thead>
+   			<tr>
+   				<th>Name</th>
+   				<th>Firstname</th>
+   				<th>Email</th>
+   				<th>Register Date</th>
+   				<th>Connect Date</th>
+   				<th></th>
+   			</tr>
+   		</thead>
+   		<tbody>
+   			{% for e in entities %}
+   			<tr>
+   				<td><a href="{{ path('user_show', { 'id': e.id }) }}">{{ e.name }}</a></td>
+   				<td>{{ e.firstname }}</td>
+   				<td>{{ e.email }}</td>
+   				<td>{{ e.registertime | date('H:i:s d/m/Y') }}</td>
+   				<td>{{ e.connecttime  | date('H:i:s d/m/Y') }}</td>
+   				<td>
+   					<a href="{{ path('user_edit', { 'id' : e.id }) }}" class="btn btn-info"><i class="glyphicon glyphicon-pencil"></i></a>
+   				</td>*
+   			</tr>
+   			{% endfor %}
+   		</tbody>
+   </table>
+{% endblock %}

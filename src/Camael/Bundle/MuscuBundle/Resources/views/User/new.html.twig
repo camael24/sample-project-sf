@@ -1,0 +1,37 @@
+{% extends 'CamaelMuscuBundle::layout.html.twig' %}
+
+{% block content %}
+	{% if form is defined %}
+   		{{ form(form) }}
+   	{% else %}
+   		 <table class="table">
+      <tr>
+         <th>Name</th>
+         <td>{{ e.name }}</td>
+      </tr>
+      <tr>
+         <th>FirstName</th>
+         <td>{{ e.firstname }}</td>
+      </tr>
+      <tr>
+         <th>Email</th>
+         <td>{{ e.email }}</td>
+      </tr>
+      <tr>
+         <th>Connect Time</th>
+         <td>{{ e.connecttime | date('H:i:s d/m/Y') }}</td>
+      </tr>  
+      <tr>
+         <th>Connect Time</th>
+         <td>{{ e.password }}</td>
+      </tr>      <tr>
+         <th>Connect Time</th>
+         <td>{{ e.cpassword }}</td>
+      </tr>
+		<tr>
+			<th>Register Time</th>
+			<td>{{ e.registertime | date('H:i:s d/m/Y') }}</td>
+		</tr>
+   </table>
+   {% endif %}
+{% endblock %}

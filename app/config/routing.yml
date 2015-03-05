@@ -1,0 +1,4 @@
+camael_muscu:
+    resource: "@CamaelMuscuBundle/Resources/config/routing.yml"
+    prefix:   /
+
